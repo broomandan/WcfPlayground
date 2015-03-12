@@ -7,7 +7,7 @@ namespace ClientApplication
     {
         private static void Main(string[] args)
         {
-            var myQueuedServiceProxy = new MyQueuedServiceProxy();
+            var myQueuedServiceProxy = new MyQueuedServiceProxy("NetMsmqBinding_IMyQueuedService");
 
             Console.WriteLine("Making request of DoAction1 to Service");
             myQueuedServiceProxy.DoAction1();
@@ -17,7 +17,6 @@ namespace ClientApplication
             myQueuedServiceProxy.DoAction2("Muhahahah");
             Console.WriteLine("Request of DoAction2 to Service completed");
 
-            
             myQueuedServiceProxy.Close();
 
             Console.ReadLine();

@@ -5,6 +5,14 @@ namespace Service.Proxy
 {
     public class MyQueuedServiceProxy : ClientBase<IMyQueuedService>, IMyQueuedService
     {
+        public MyQueuedServiceProxy()
+        {
+        }
+
+        public MyQueuedServiceProxy(string endpointConfigurationName) : base(endpointConfigurationName)
+        {
+        }
+
         public void DoAction1()
         {
             Channel.DoAction1();
