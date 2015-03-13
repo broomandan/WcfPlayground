@@ -21,7 +21,15 @@ namespace Service.Host
             AddTcpEndpoint(host, netTcpLocalhostBaseAddress);
 
             AddMsmqEndpoint(host, msmqAddress);
+
+            AddServiceBusMessaginEndpoint(host);
+
             return host;
+        }
+
+        private static void AddServiceBusMessaginEndpoint(ServiceHost host)
+        {
+            
         }
 
         private static void AddMsmqEndpoint(ServiceHost host, Uri serviceUri)

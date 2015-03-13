@@ -14,5 +14,10 @@ namespace Service.Host
         {
             Console.WriteLine("Action2 performed! with message={0}", message);
         }
+
+        public void DoAction3(Message message)
+        {
+            Console.WriteLine("MessageId={0}, MessageDescription={1}", message.Id, message.Description);
+        }
     }
 }

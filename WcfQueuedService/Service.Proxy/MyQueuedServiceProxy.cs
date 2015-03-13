@@ -22,5 +22,10 @@ namespace Service.Proxy
         {
             Channel.DoAction2(message);
         }
+
+        public void DoAction3(Message message)
+        {
+            Channel.DoAction3(message);
+        }
     }
 }
