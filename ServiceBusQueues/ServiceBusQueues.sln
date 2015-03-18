@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBusQueues.Sender", "ServiceBusQueues.Sender\ServiceBusQueues.Sender.csproj", "{B62C5E69-9434-4689-8423-303742118347}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBusQueues.Receiver", "ServiceBusQueues.Receiver\ServiceBusQueues.Receiver.csproj", "{8241CD85-F94B-4C10-BB6E-15A0C94E78E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBus.Management", "ServiceBus.Management\ServiceBus.Management.csproj", "{58034ADB-0927-424F-9211-0DA837CD79AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B62C5E69-9434-4689-8423-303742118347}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B62C5E69-9434-4689-8423-303742118347}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B62C5E69-9434-4689-8423-303742118347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8241CD85-F94B-4C10-BB6E-15A0C94E78E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8241CD85-F94B-4C10-BB6E-15A0C94E78E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8241CD85-F94B-4C10-BB6E-15A0C94E78E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8241CD85-F94B-4C10-BB6E-15A0C94E78E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58034ADB-0927-424F-9211-0DA837CD79AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58034ADB-0927-424F-9211-0DA837CD79AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58034ADB-0927-424F-9211-0DA837CD79AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58034ADB-0927-424F-9211-0DA837CD79AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

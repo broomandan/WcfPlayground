@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.ServiceBus.Messaging;
+using ServiceBus.Management;
 
 namespace ServiceBusQueues.Sender
 {
     internal class Program
     {
         private const string QueueName = "IssueTrackingQueue";
-        private const string ServiceNamespace = "ur namespace";
+        private const string ServiceNamespace = "yournamespaceName";
         private const string SasKeyName = "RootManageSharedAccessKey";
-        private const string SasKeyValue = "yoursecrete";
+        private const string SasKeyValue = "yoursaskeyvalue";
 
         private static void Main(string[] args)
         {
@@ -17,7 +18,7 @@ namespace ServiceBusQueues.Sender
 
             var sbHelper = new ServiceBusHelper(ServiceNamespace, SasKeyName, SasKeyValue, QueueName);
 
-            var myQueueClient = sbHelper.CreateQueueClient(QueueName, ServiceNamespace);
+            var myQueueClient = sbHelper.CreateQueueClient(QueueName);
 
             Console.WriteLine("Now sending messages to the SendToQueue.");
             SendToQueue(myQueueClient, messageList);

@@ -1,7 +1,7 @@
-﻿using Microsoft.ServiceBus;
+using Microsoft.ServiceBus;
 using Microsoft.ServiceBus.Messaging;
 
-namespace ServiceBusQueues.Sender
+namespace ServiceBus.Management
 {
     public class ServiceBusHelper
     {
@@ -28,10 +28,10 @@ namespace ServiceBusQueues.Sender
             }
         }
 
-        public QueueClient CreateQueueClient(string queueName, string namespaceName)
+        public QueueClient CreateQueueClient(string queueName)
         {
             var factory =
-                MessagingFactory.Create(ServiceBusEnvironment.CreateServiceUri("sb", namespaceName, string.Empty),
+                MessagingFactory.Create(ServiceBusEnvironment.CreateServiceUri("sb", _serviceNamespace, string.Empty),
                     _tokenProvider);
 
             var myQueueClient = factory.CreateQueueClient(queueName);
