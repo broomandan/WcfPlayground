@@ -1,0 +1,16 @@
+﻿IssueID,IssueTitle,CustomerID,CategoryID,SupportPackage,Priority,Severity,Resolved
+1,Package lost,1,1,Basic,5,1,FALSE
+2,Package damaged,1,1,Basic,5,1,FALSE
+3,Product defective,1,2,Premium,5,2,FALSE
+4,Product damaged,2,2,Premium,5,2,FALSE
+5,Package lost,2,2,Basic,5,2,TRUE
+6,Package lost,3,2,Basic,5,2,FALSE
+7,Package damaged,3,7,Premium,5,3,FALSE
+8,Product defective,3,2,Premium,5,3,FALSE
+9,Product damaged,4,6,Premium,5,3,TRUE
+10,Package lost,4,8,Basic,5,3,FALSE
+11,Package damaged,5,4,Basic,5,4,FALSE
+12,Product defective,5,4,Basic,5,4,FALSE
+13,Package lost,6,8,Basic,5,4,FALSE
+14,Package damaged,6,7,Premium,5,5,FALSE
+15,Product defective,6,2,Premium,5,5,FALSE
