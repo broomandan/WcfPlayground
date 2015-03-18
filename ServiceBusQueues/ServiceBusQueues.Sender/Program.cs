@@ -7,9 +7,9 @@ namespace ServiceBusQueues.Sender
     internal class Program
     {
         private const string QueueName = "IssueTrackingQueue";
-        private const string ServiceNamespace = "fci-platform-messaging";
+        private const string ServiceNamespace = "ur namespace";
         private const string SasKeyName = "RootManageSharedAccessKey";
-        private const string SasKeyValue = "5YI8iaOjHvFGxgrv1ECo0EYNYNGRtZhO/Geg5/7BLXs=";
+        private const string SasKeyValue = "yoursecrete";
 
         private static void Main(string[] args)
         {
