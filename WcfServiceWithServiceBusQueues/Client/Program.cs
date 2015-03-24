@@ -1,7 +1,7 @@
 ﻿using System;
-using System.ServiceModel;
 using System.ServiceModel.Channels;
 using Contract;
+using Message = Contract.Message;
 
 namespace Client
 {
@@ -14,28 +14,21 @@ namespace Client
             try
             {
                 Console.Title = "Client for WCF serrvice using Service Bus Queues";
-
-
-                var sendChannelFactory = new ChannelFactory<IMyQueuedService>(ServiceQueueName);
-                var clientChannel = sendChannelFactory.CreateChannel();
-                ((IChannel) clientChannel).Open();
+                var serviceProxy = new MyQueuedServiceProxy(ServiceQueueName);
 
                 // Send messages
 
                 Console.WriteLine("Sending message to {0}...", ServiceQueueName);
-                var message = new Contract.Message() {Id = 65, Description = "First Message"};
-                clientChannel.DoAction3(message);
+                var message = new Message {Id = 65, Description = "First Message"};
 
-
-                // Close sender
-                ((IChannel) clientChannel).Close();
-                sendChannelFactory.Close();
+                serviceProxy.DoAction3(message);
+                
             }
             catch (Exception exception)
             {
                 Console.WriteLine("Exception occurred: {0}", exception);
             }
-
+            
             Console.WriteLine("\nClient complete.");
             Console.WriteLine("\nPress [Enter] to exit.");
             Console.ReadLine();

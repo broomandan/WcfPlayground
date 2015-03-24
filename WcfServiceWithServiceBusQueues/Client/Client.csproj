@@ -63,6 +63,10 @@
       <Project>{9f2ec48a-9f71-4886-ac32-adf4f8f636f2}</Project>
       <Name>Contract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServiceModelEx\ServiceModelEx.csproj">
+      <Project>{8CA008EB-4C74-41DC-A325-83741670F167}</Project>
+      <Name>ServiceModelEx</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
