@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CA008EB-4C74-41DC-A325-83741670F167}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceModelEx</RootNamespace>
+    <AssemblyName>ServiceModelEx</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ServiceBus">
+      <HintPath>..\packages\WindowsAzure.ServiceBus.2.6.4\lib\net40-full\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.0.0\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncOneWayClientBase.cs" />
+    <Compile Include="Bindings\BindingRequirementAttribute.cs" />
+    <Compile Include="Bindings\NetNamedPipeContextBinding.cs" />
+    <Compile Include="Context\ContextClientBase.cs" />
+    <Compile Include="Context\ContextManager.cs" />
+    <Compile Include="Context\GenericContext.cs" />
+    <Compile Include="Context\HeaderChannelFactory.cs" />
+    <Compile Include="Context\HeaderClientBase.cs" />
+    <Compile Include="Data\DataTableHelper.cs" />
+    <Compile Include="Data\GenericDataContractSerializer.cs" />
+    <Compile Include="Data\GenericResolver.cs" />
+    <Compile Include="Data\GenericResolverBehaviorAttribute.cs" />
+    <Compile Include="Data\GenericResolverInstaller.cs" />
+    <Compile Include="Duplex\DuplexChannelFactory.cs" />
+    <Compile Include="Duplex\DuplexClientBase.cs" />
+    <Compile Include="Duplex\InstanceContext.cs" />
+    <Compile Include="Errors\CallbackErrorHandlerAttribute.cs" />
+    <Compile Include="Errors\DebugHelper.cs" />
+    <Compile Include="Errors\ErrorHandlerAttribute.cs" />
+    <Compile Include="Errors\ErrorHandlerHelper.cs" />
+    <Compile Include="Errors\Logbook\LogbookEntryClient.cs" />
+    <Compile Include="Errors\Logbook\LogbookEntryService.cs" />
+    <Compile Include="Errors\Logbook\LogbookManagerProxy.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\Collection.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="GenericInterceptor\GenericInvoker.cs" />
+    <Compile Include="GenericInterceptor\InterceptorChannelFactory.cs" />
+    <Compile Include="GenericInterceptor\InterceptorClientBase.cs" />
+    <Compile Include="GenericInterceptor\OperationInterceptorBehaviorAttribute.cs" />
+    <Compile Include="GenericInterceptor\ServiceInterceptorBehaviorAttribute.cs" />
+    <Compile Include="Hosting\Discovery\AddressesContainer.cs" />
+    <Compile Include="Hosting\Discovery\AnnouncementSink.cs" />
+    <Compile Include="Hosting\Discovery\DiscoveredServices.cs" />
+    <Compile Include="Hosting\Discovery\DiscoveryFactory.cs" />
+    <Compile Include="Hosting\Discovery\DiscoveryHelper.cs" />
+    <Compile Include="Hosting\Discovery\DiscoveryPublishService.cs" />
+    <Compile Include="Hosting\InProcFactory.cs" />
+    <Compile Include="Hosting\ServiceHost.cs" />
+    <Compile Include="Hosting\ServiceThrottleHelper.cs" />
+    <Compile Include="Hosting\WcfWrapper.cs" />
+    <Compile Include="MetadataHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queueing\ClientResponseBase.cs" />
+    <Compile Include="Queueing\QueuedServiceHelper.cs" />
+    <Compile Include="Queueing\ResponseContext.cs" />
+    <Compile Include="Queueing\ServiceResponseBase.cs" />
+    <Compile Include="Security\Declarative Security\SecureClientBase.cs" />
+    <Compile Include="Security\Declarative Security\SecureDuplexClientBase.cs" />
+    <Compile Include="Security\Declarative Security\SecurityBehavior.cs" />
+    <Compile Include="Security\Declarative Security\SecurityBehaviorAttribute.cs" />
+    <Compile Include="Security\Declarative Security\SecurityHelper.cs" />
+    <Compile Include="Security\Declarative Security\ServiceSecurity.cs" />
+    <Compile Include="Security\Identity Stack\SecurityCallFrame.cs" />
+    <Compile Include="Security\Identity Stack\SecurityCallStack.cs" />
+    <Compile Include="Security\Identity Stack\SecurityCallStackClientBase.cs" />
+    <Compile Include="Security\Identity Stack\SecurityCallStackContext.cs" />
+    <Compile Include="Security\Identity Stack\SecurityCallStackInterceptor.cs" />
+    <Compile Include="ServiceBus\Discovery\IServiceBusAnnouncements.cs" />
+    <Compile Include="ServiceBus\Discovery\IServiceBusDiscovery.cs" />
+    <Compile Include="ServiceBus\Discovery\IServiceBusDiscoveryCallback.cs" />
+    <Compile Include="ServiceBus\Discovery\ServiceBusAnnouncementSink.cs" />
+    <Compile Include="ServiceBus\Discovery\ServiceBusDiscoveredServices.cs" />
+    <Compile Include="ServiceBus\Discovery\ServiceBusDiscoveryFactory.cs" />
+    <Compile Include="ServiceBus\Discovery\ServiceBusDiscoveryHelper.cs" />
+    <Compile Include="ServiceBus\Discovery\ServiceBusGraph.cs" />
+    <Compile Include="ServiceBus\Discovery\ServiceBusNode.cs" />
+    <Compile Include="ServiceBus\Hosts\DiscoverableServiceHost.cs" />
+    <Compile Include="ServiceBus\Hosts\DiscoverableServiceHost.DiscoveryRequestService.cs" />
+    <Compile Include="ServiceBus\Hosts\QueuedServiceBusHost.cs" />
+    <Compile Include="ServiceBus\Hosts\ServiceBusEventsHost.cs" />
+    <Compile Include="ServiceBus\Hosts\ServiceBusHost.cs" />
+    <Compile Include="ServiceBus\IServiceBusProperties.cs" />
+    <Compile Include="ServiceBus\Proxies\ClientResponseBase.cs" />
+    <Compile Include="ServiceBus\Proxies\OneWayProxy.cs" />
+    <Compile Include="ServiceBus\Proxies\QueuedServiceBusClient.cs" />
+    <Compile Include="ServiceBus\Proxies\ServiceBusDiscoveryClient.cs" />
+    <Compile Include="ServiceBus\Proxies\ServiceBusDuplexProxy.cs" />
+    <Compile Include="ServiceBus\Proxies\ServiceBusEventsClientBase.cs" />
+    <Compile Include="ServiceBus\Proxies\ServiceBusProxy.cs" />
+    <Compile Include="ServiceBus\Proxies\ServiceQueueResponseBase.cs" />
+    <Compile Include="ServiceBus\ServiceBusHelper - Buffers.cs" />
+    <Compile Include="ServiceBus\ServiceBusHelper - Configuration.cs" />
+    <Compile Include="ServiceBus\ServiceBusHelper - Queues.cs" />
+    <Compile Include="ServiceBus\ServiceBusHelper - Security.cs" />
+    <Compile Include="ServiceBus\ServiceBusMetadataHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hosting\AppDomainHost.zip" />
+    <None Include="packages.config" />
+    <None Include="Queueing\ResponseScope from Second Edition.zip" />
+    <None Include="Security\CAS.zip" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
