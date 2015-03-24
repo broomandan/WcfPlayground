@@ -1,5 +1,5 @@
 ﻿using System;
-using System.ServiceModel;
+using ServiceModelEx.ServiceBus.Hosts;
 
 namespace Service
 {
@@ -14,12 +14,8 @@ namespace Service
                 Console.Title = "MyQueuedService Service";
                 Console.WriteLine("Ready to receive messages from {0}...", QueueName);
 
-                
-                var serviceHost = new ServiceHost(typeof (MyQueuedService));
 
-                serviceHost.Description.Behaviors.Add(new ErrorServiceBehavior());
-
-                serviceHost.Faulted += new EventHandler(serviceHost_Faulted);
+                var serviceHost = new QueuedServiceBusHost(typeof (MyQueuedService));
 
                 serviceHost.Open();
 
@@ -34,11 +30,6 @@ namespace Service
                 Console.WriteLine("\nPress [Enter] to exit.");
                 Console.ReadLine();
             }
-        }
-        private static void serviceHost_Faulted(object sender, EventArgs e)
-        {
-            Console.WriteLine("Fault occurred. Aborting the service host object ...");
-            ((ServiceHost) sender).Abort();
         }
     }
 }

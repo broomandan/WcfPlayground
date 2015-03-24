@@ -43,7 +43,6 @@ namespace ServiceModelEx.ServiceBus.Hosts
          this.AddGenericResolver();
 
          IServiceBusProperties properties = this as IServiceBusProperties;
- Console.Write("sss");
          foreach(ServiceEndpoint endpoint in Description.Endpoints)
          {
             Tuple<Uri,string> tuple = ServiceBusHelper.ParseUri(endpoint.Address.Uri);
