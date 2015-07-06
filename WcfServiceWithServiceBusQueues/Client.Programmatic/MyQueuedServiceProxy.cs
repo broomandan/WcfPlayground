@@ -1,13 +1,12 @@
-﻿using System.ServiceModel.Channels;
-using ServiceModelEx.ServiceBus.Proxies;
+using System.ServiceModel.Channels;
+using Client.Programmatic.IFX.ServiceBus.Proxy;
+using Contract;
+using Message = Contract.Message;
 
-namespace Contract
+namespace Client.Programmatic
 {
-    public class MyQueuedServiceProxy : QueuedServiceBusClient<IMyQueuedService>, IMyQueuedService
+    public class MyQueuedServiceProxy : ProgrammaticQueuedServiceBusClient<IMyQueuedService>, IMyQueuedService
     {
-        public MyQueuedServiceProxy(string endpointName, string sessionId = null) : base(endpointName, sessionId)
-        {
-        }
 
         public void DoAction1()
         {
