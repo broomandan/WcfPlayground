@@ -24,5 +24,5 @@ The emphasis is on Microsoft Azure Service Bus messaging technologies.
 
   References:
   
-    1. ServiceModelEx by Idesign
+    1. ServiceModelEx by IDesign Inc.
     2. https://code.msdn.microsoft.com/windowsazure/Brokered-Messaging-WCF-db4262c2
