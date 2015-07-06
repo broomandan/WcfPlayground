@@ -15,8 +15,7 @@ The emphasis is on Microsoft Azure Service Bus messaging technologies.
   **Instructions**:
   1. Open ServiceBusConfigurationItems.cs file and add you namespace name and shared secret
 	  
-    Example: for "sb://Robert-messaging.servicebus.windows.net"
-    Set `Namespace ="Robert-messaging"`
+      For example: if you Service Bus address is "sb://Robert-messaging.servicebus.windows.net", set `Namespace ="Robert-messaging"`
   2. Queue name conventions:
   
     1. In Development environment generated queue name is "ServiceContractName-HostMachineName" 
